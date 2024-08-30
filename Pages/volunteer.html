@@ -68,6 +68,12 @@
         </section>
     </main>
 
+    <!-- Modal para visualização das imagens -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Mariana Lopes Pereira. All rights reserved, but feel free to reach out for a chat!</p>
@@ -78,5 +84,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Pega o modal
+        var modal = document.getElementById("myModal");
+
+        // Pega a imagem dentro do modal para mostrar a imagem ampliada
+        var modalImg = document.getElementById("img01");
+
+        // Pega a classe de imagens da galeria
+        var galleryImages = document.querySelectorAll('.gallery-image');
+
+        // Adiciona o evento de clique em cada imagem
+        galleryImages.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src; // Define a imagem do modal como a da galeria
+            }
+        });
+
+        // Pega o elemento de fechar
+        var span = document.getElementsByClassName("close")[0];
+
+        // Quando clicar no "x", o modal fecha
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Fecha o modal ao clicar fora da imagem
+        modal.onclick = function(e) {
+            if (e.target !== modalImg) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
