@@ -1,0 +1,288 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Banner Styles */
+header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.header-info h1 {
+    font-size: 3em;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+}
+
+.header-info p {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.header-info a {
+    color: #ffe38e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-info a:hover {
+    color: #fff;
+}
+
+.subheading {
+    font-size: 1.3em;
+}
+
+.funny-text {
+    font-style: italic;
+    color: #ffe38e;
+}
+
+.header-photo {
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabs Section */
+.tabs-section {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-link {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.tab-link i {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.tab-link:hover,
+.tab-link.active {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    transform: translateY(-5px);
+}
+
+/* Main Content Section */
+main {
+    padding: 40px 0;
+}
+
+.content-section {
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff7e5f;
+    font-family: 'Pacifico', cursive;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-link {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #ff7e5f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-photo {
+        margin-top: 20px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-link {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+    /* Hobbies Grid Styles */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hobby-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hobbies List Styles */
+.hobbies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hobby-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.hobby-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #ff7e5f;
+    font-family: 'Pacifico', cursive;
+}
+
+.hobby-item p {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.hobby-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+/* Description and Gallery Styles */
+.hobbies-description, .volunteering-description {
+    margin-bottom: 40px;
+}
+
+.hobby-item, .volunteer-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.hobby-item h3, .volunteer-item h3 {
+    font-size: 1.5em;
+    color: #ff7e5f;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+}
+
+.hobby-item p, .volunteer-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+.gallery-section {
+    margin-top: 40px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    width: 150px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 100px; /* Ajuste o tamanho das imagens conforme necessário */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+}
