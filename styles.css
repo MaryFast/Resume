@@ -31,10 +31,6 @@ header {
   align-items: center;
 }
 
-.header-info {
-  flex: 1;
-}
-
 .header-info h1 {
   font-size: 3em;
   font-family: "Pacifico", cursive;
@@ -127,22 +123,12 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+h2.section-title {
   font-size: 2.5em;
   margin-bottom: 20px;
   color: #ff7e5f;
   font-family: "Pacifico", cursive;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 20px;
-  text-align: left;
-  font-size: 1.2em;
+  text-align: center;
 }
 
 /* Footer Styles */
@@ -170,10 +156,6 @@ footer {
   color: #ff7e5f;
 }
 
-.paragraph-spacing p {
-  margin-bottom: 0.7em; /* Ajuste o valor conforme necessário */
-}
-
 /* Hobbies Grid Styles */
 .hobbies-grid {
   display: grid;
@@ -190,21 +172,6 @@ footer {
   padding: 20px;
 }
 
-/* Hobbies List Styles */
-.hobbies-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.hobby-item {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-}
-
 .hobby-item h3 {
   margin: 10px 0;
   font-size: 1.5em;
@@ -218,35 +185,26 @@ footer {
   margin-top: 10px;
 }
 
-.hobby-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
 /* Estilos para a galeria */
 .gallery-container {
-  padding: 0 20px; /* Adiciona espaço ao redor do contêiner da galeria */
+  padding: 0 20px;
 }
 
 .gallery {
   display: flex;
   gap: 20px;
-  overflow-x: auto; /* Adiciona rolagem horizontal */
-  scroll-snap-type: x mandatory; /* Adiciona rolagem suave para o eixo X */
-  -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave em dispositivos móveis */
-  padding: 10px 0; /* Adiciona um pouco de espaço ao redor da galeria */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 0;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza a galeria */
+  justify-content: center;
 }
 
-/* Ajustes para as imagens da galeria */
 .gallery-image {
-  width: 100%; /* Inicialmente ocupa 100% do espaço disponível */
-  max-width: 300px; /* Limita o tamanho máximo da imagem */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
@@ -254,88 +212,57 @@ footer {
 }
 
 .gallery-image:hover {
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
-}
-
-/* Media Queries para telas grandes */
-@media (min-width: 1200px) {
-  .gallery {
-    flex-wrap: nowrap; /* Evita quebra de linha em telas grandes */
-    justify-content: space-between; /* Distribui o espaço entre as imagens */
-  }
-
-  .gallery-image {
-    width: 30%; /* Define 30% da largura do contêiner para cada imagem */
-  }
-}
-
-/* Media Queries para telas médias */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .gallery-image {
-    width: 48%; /* Ocupa aproximadamente metade da largura em telas médias */
-  }
-}
-
-/* Media Queries para telas pequenas */
-@media (max-width: 767px) {
-  .gallery-image {
-    width: 100%; /* Imagens ocupam toda a largura disponível em telas pequenas */
-  }
+  transform: scale(1.05);
 }
 
 /* Modal styles */
 .modal {
-    display: none;  /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);  /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;  /* Prevent overflow */
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Image styles inside the modal */
 .modal-content {
-    width: 100%;
-    max-width: 100%;  /* Ensure it scales properly */
-    max-height: 100%;  /* Ensure it scales properly */
-    object-fit: contain;  /* Maintain aspect ratio */
-    border-radius: 8px;  /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow for depth */
-    justify-content: center;
-    align-items: center;
-    margin: auto; /* Ensures centering within the modal */
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Close button */
 .close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .modal-content {
-        width: 80%;  /* Increase width on smaller screens */
-        max-width: 80%;
-        max-height: 70%;  /* Adjust height for smaller screens */
-    }
+  .modal-content {
+    width: 80%;
+    max-width: 80%;
+    max-height: 70%;
+  }
 }
 
 @media (max-width: 480px) {
-    .modal-content {
-        width: 90%;  /* Further increase width on very small screens */
-        max-width: 90%;
-        max-height: 60%;  /* Adjust height accordingly */
-    }
+  .modal-content {
+    width: 90%;
+    max-width: 90%;
+    max-height: 60%;
+  }
 }
