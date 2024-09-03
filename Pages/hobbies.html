@@ -59,7 +59,7 @@
             </div>
             <div class="hobby-item">
               <h3>Netflix and Chill</h3>
-              <p>Exploring new movies and finishing tv shows is a passion of mine. Who doens't like to stay in bed. watch some shows and just do nothing? Besides taking the ocasionally nap to recharge...</p>
+              <p>Exploring new movies and finishing tv shows is a passion of mine. Who doesn't like to stay in bed, watch some shows and just do nothing? Besides taking the occasional nap to recharge...</p>
             </div>
           </div>
 
@@ -95,26 +95,40 @@
     </footer>
 
     <script>
+      // Obter referências dos elementos
       var modal = document.getElementById("myModal");
       var modalImg = document.getElementById("img01");
       var galleryImages = document.querySelectorAll(".gallery-image");
 
+      // Adicionar evento de clique a cada imagem da galeria
       galleryImages.forEach(function (image) {
         image.onclick = function () {
-          modal.style.display = "block";
-          modalImg.src = this.src;
+          // Verificar se a imagem foi carregada e tem um tamanho válido
+          if (this.complete && this.naturalWidth > 0) {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+          } else {
+            alert("Imagem não encontrada ou falhou ao carregar."); // Exibir alerta para imagens faltando
+          }
         };
       });
 
+      // Evento para fechar o modal ao clicar no "X"
       var span = document.getElementsByClassName("close")[0];
       span.onclick = function () {
         modal.style.display = "none";
       };
 
+      // Fechar o modal ao clicar fora da imagem modal
       modal.onclick = function (e) {
         if (e.target !== modalImg) {
           modal.style.display = "none";
         }
+      };
+
+      // Impedir que o modal abra ao carregar automaticamente
+      window.onload = function() {
+        modal.style.display = "none";
       };
     </script>
   </body>
